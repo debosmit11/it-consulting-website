@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard - TechNova</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/9e5d5f9d4f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><i class="fas fa-chart-line"></i> TechNova Dashboard</div>
+    <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </header>
+
+  <section class="dashboard">
+    <h1 id="welcomeMessage"></h1>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <i class="fas fa-user-circle fa-5x"></i>
+      <h2 id="profileName"></h2>
+      <p><i class="fas fa-calendar-alt"></i> Account Created: <span id="profileDate"></span></p>
+    </div>
+
+    <!-- Quick Actions / Services -->
+    <h2>Quick Actions</h2>
+    <div class="dashboard-grid">
+      <div class="dash-card" onclick="window.location.href='about.html'">
+        <i class="fas fa-building"></i>
+        <h3>About TechNova</h3>
+        <p>Learn about our company, values, and mission.</p>
+      </div>
+      <div class="dash-card" onclick="window.location.href='about.html#services'">
+        <i class="fas fa-cogs"></i>
+        <h3>Our Services</h3>
+        <p>Explore IT consulting and digital transformation solutions.</p>
+      </div>
+      <div class="dash-card" onclick="window.location.href='about.html#case-studies'">
+        <i class="fas fa-briefcase"></i>
+        <h3>Case Studies</h3>
+        <p>See how we’ve impacted the industry with our clients.</p>
+      </div>
+      <div class="dash-card" onclick="window.location.href='about.html#contact'">
+        <i class="fas fa-envelope"></i>
+        <h3>Contact Us</h3>
+        <p>Get in touch with our expert team today.</p>
+      </div>
+    </div>
+
+    <!-- Notifications / Activity -->
+    <h2>Recent Activity</h2>
+    <div class="activity-feed">
+      <div class="activity">
+        <i class="fas fa-check-circle"></i> You successfully logged in today
+      </div>
+      <div class="activity">
+        <i class="fas fa-comment-dots"></i> New feedback form submitted
+      </div>
+      <div class="activity">
+        <i class="fas fa-user-plus"></i> New IT consultant joined the team
+      </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <h2>Support & Feedback</h2>
+    <form class="dashboard-form" id="dashFeedbackForm">
+      <textarea placeholder="Leave your feedback or request support..." required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+      <p id="dashFeedbackResponse"></p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
